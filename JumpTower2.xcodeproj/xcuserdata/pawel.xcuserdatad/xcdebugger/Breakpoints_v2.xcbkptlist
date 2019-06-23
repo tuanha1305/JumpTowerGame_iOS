@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JumpTower2/FlowerNode.swift"
+            timestampString = "583010341.5369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JumpTower2.FlowerType.init(rawValue: Swift.Int) -&gt; Swift.Optional&lt;JumpTower2.FlowerType&gt;"
+                  moduleName = "JumpTower2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawel/Desktop/GraJump2/JumpTower2/JumpTower2/FlowerNode.swift"
+                  timestampString = "582746088.373812"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JumpTower2.FlowerType.rawValue.getter : Swift.Int"
+                  moduleName = "JumpTower2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawel/Desktop/GraJump2/JumpTower2/JumpTower2/FlowerNode.swift"
+                  timestampString = "582746088.378361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
