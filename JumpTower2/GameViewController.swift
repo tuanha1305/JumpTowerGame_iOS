@@ -3,7 +3,7 @@
 //  JumpTower2
 //
 //  Created by Pawel on 15/06/2019.
-//  Copyright © 2019 Pawel. All rights reserved.
+//  Copyright © 2019 Rafal Walasek. All rights reserved.
 //
 
 import UIKit
@@ -18,9 +18,9 @@ class GameViewController: UIViewController {
        let skView = self.view as! SKView
         
         
-        //added
+        
         skView.showsFPS = true
-        skView.showsNodeCount = true
+      //  skView.showsNodeCount = true
         
         let scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFit

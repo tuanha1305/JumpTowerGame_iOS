@@ -3,7 +3,7 @@
 //  JumpTower2
 //
 //  Created by Pawel on 16/06/2019.
-//  Copyright © 2019 Pawel. All rights reserved.
+//  Copyright © 2019 Rafal Walasek. All rights reserved.
 //
 
 import SpriteKit
@@ -71,13 +71,15 @@ extension GameScene{
         
         playerNode.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 2)
         
-        playerNode.physicsBody?.isDynamic = false // bylo dynamic nie isDynamic
+        playerNode.physicsBody?.isDynamic = false  // statyczne przed pierwszym kliknieciem
         playerNode.physicsBody?.allowsRotation = false
         
         playerNode.physicsBody?.restitution = 1
         playerNode.physicsBody?.friction = 0
             playerNode.physicsBody?.angularDamping = 0
             playerNode.physicsBody?.linearDamping = 0
+        
+        // Kolizje
         
         playerNode.physicsBody?.usesPreciseCollisionDetection = true
         playerNode.physicsBody?.categoryBitMask = CollisionCategoryBitMask.Player
@@ -89,6 +91,9 @@ extension GameScene{
         
         return playerNode
     }
+    
+    // Platformy
+    
     func createPlatformAtPosition(position:CGPoint, ofType type:PlatformType)->PlatformNode{
         let node = PlatformNode()
         let thePosition = CGPoint(x: position.x * scaleFactor, y: position.y)
@@ -109,7 +114,10 @@ extension GameScene{
     node.addChild(sprite)
     
         node.physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
-        node.physicsBody?.isDynamic = false
+        node.physicsBody?.isDynamic = false // statyczne
+        
+        //Kolizje
+        
         node.physicsBody?.categoryBitMask = CollisionCategoryBitMask.Platform
         node.physicsBody?.contactTestBitMask = 0
         
@@ -118,7 +126,7 @@ extension GameScene{
     
     
     //  GWIAZDA
-    // funkcja utworzona poprzez skopiowanie poprzedniej i zmodyfikowanie
+    // funkcja utworzona poprzez skopiowanie poprzedniej (..platform...) i zmodyfikowanie
     
   
           func createFlowerAtPosition(position:CGPoint, ofType type:FlowerType)->FlowerNode{        let node = FlowerNode()
@@ -143,36 +151,5 @@ extension GameScene{
         return node
     }
     
-    
-    /*
-    
-    func createFlowerAtPosition(position:CGPoint, ofType type:FlowerType)->FlowerNode{
-        let node = FlowerNode()
-        let position = CGPoint(x: position.x * scaleFactor, y: position.y)
-        node.position = position
-        node.name = "FLOWERNODE"
-        node.flowerType = type
-        
-        
-        var sprite:SKSpriteNode
-        
-        
-        if type == FlowerType.NormalFlower{
-            sprite = SKSpriteNode(imageNamed: "Star")
-            
-        }else{
-            sprite = SKSpriteNode(imageNamed: "StarSpecial")
-        }
-        node.addChild(sprite)
-        
-        node.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 2 )
-        node.physicsBody?.isDynamic = false
-  
-        node.physicsBody?.categoryBitMask = CollisionCategoryBitMask.Flower
-        node.physicsBody?.collisionBitMask = 0
-        
-        return node
-    }
-    */
     
 }
